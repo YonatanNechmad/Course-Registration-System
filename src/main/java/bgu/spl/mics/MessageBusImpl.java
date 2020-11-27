@@ -1,14 +1,26 @@
 package bgu.spl.mics;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Queue;
+
 /**
  * The {@link MessageBusImpl class is the implementation of the MessageBus interface.
  * Write your implementation here!
  * Only private fields and methods can be added to this class.
  */
-public class MessageBusImpl implements MessageBus {
+public class MessageBusImpl<T> implements MessageBus {
 
 	//data members
-	
+	HashMap <Integer , MicroService> registers ;
+
+	Integer numOfRegisters;
+
+	//List<MicroService> registers;
+
+	List<Queue<Message>> queueToRegisters;
+
+	//List<Queue<Event<>>>
 
 
 	//============================
@@ -18,6 +30,10 @@ public class MessageBusImpl implements MessageBus {
 	}
 
 	private MessageBusImpl(){
+		registers=null;
+		numOfRegisters=0;
+
+
 
 	}
 
@@ -55,7 +71,11 @@ public class MessageBusImpl implements MessageBus {
 
 	@Override
 	public void register(MicroService m) {
-		
+		registers=new HashMap<>();
+		numOfRegisters=0;
+
+
+
 	}
 
 	@Override
