@@ -4,20 +4,23 @@ The program is a registration system at BG University. focused on communication 
 
 Testing run commands:
 
-Reactor server:
+put Course.txt file on server folder
+
+To use reactor server:
 
 mvn exec:java -Dexec.mainClass=”bgu.spl.net.impl.BGRSServer.ReactorMain” -
 
 Dexec.args=”<port> <No of threads>”
 
 
-Thread per client server:
+To use thread per client server:
 
 mvn exec:java -Dexec.mainClass=”bgu.spl.net.impl.BGRSServer.TPCMain” -
 
 Dexec.args=”<port>”
 
 after than :
+
 (on client folder)
 
 make
