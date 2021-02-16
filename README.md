@@ -20,6 +20,7 @@ Dexec.args=”<port>”
 after than :
 (on client folder)
 make
+
 BGRSclient <ip> <port> 
 
 
